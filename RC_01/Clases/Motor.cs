@@ -10,7 +10,7 @@ namespace RC_01.Clases
         DOS_TIEMPOS, CUATRO_TIEMPOS
     }
 
-    class Motor: VehiculoComponentes
+    class Motor: VehiculoComponente
     {
         private readonly int _id;
         private readonly TipoMotor _tipo;

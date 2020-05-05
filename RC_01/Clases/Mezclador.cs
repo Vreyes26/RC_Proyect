@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RC_01.VehiculoComponentes
+namespace RC_01.Clases
 {
     enum TipoMezclador
     {

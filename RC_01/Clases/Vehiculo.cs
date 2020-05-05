@@ -20,6 +20,7 @@ namespace RC_01.Clases
                          int numRuedas, TipoRecubrimiento tipoRecubrimiento,
                          int minDurometro, int maxDurometro,
                          TipoMezclador tipoMezclador, double capacidad)
+
         {
 
         }
