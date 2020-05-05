@@ -11,7 +11,7 @@ namespace RC_01
 
             string usuario = "admin" ;
             string contraseña = "abc123";
-            bool value = false;
+            bool login = false;
 
             do
             {
@@ -25,7 +25,7 @@ namespace RC_01
                 {
                     Console.Clear();
                     Console.WriteLine("-------Bienvenido-------");
-                    value = true;
+                    login = true;
                     Clases.Menu _menu = new Clases.Menu();
                     _menu.ListOptions();
                 }
@@ -33,7 +33,7 @@ namespace RC_01
                 {
                     Console.WriteLine("-------Usuario o contraseña incorrectos-------");
                 }
-            } while (value == false);
+            } while (login == false);
 
             
 

@@ -15,7 +15,10 @@ namespace RC_01.Clases
         private readonly int[] _durometro;
         private TipoRecubrimiento _recubrimiento;
 
-        public Rueda(TipoRecubrimiento, int minDurometro, int maxDurometro,)
+        public Rueda(TipoRecubrimiento, int minDurometro, int maxDurometro)
+        {
+
+        }
 
     }
 }
