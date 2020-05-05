@@ -17,7 +17,7 @@ namespace RC_01.Clases
 
         public Rueda(TipoRecubrimiento, int minDurometro, int maxDurometro)
         {
-
+            
         }
 
     }

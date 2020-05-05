@@ -7,7 +7,7 @@ namespace RC_01.Clases
     class Estanque : VehiculoComponente
     {
         private readonly double _capacidad;
-        private int _litros;
+        private double _litros;
 
         public Estanque(double capacidad)
         {
@@ -16,6 +16,7 @@ namespace RC_01.Clases
 
         public double Capacidad => _capacidad;
 
+        public double Litros { get => _litros; set => _litros = value; }
 
     }
 }
