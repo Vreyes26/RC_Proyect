@@ -29,6 +29,10 @@ namespace RC_01.Clases
             _estanque = new Estanque(capacidad);
             _mezclador = new Mezclador(tipoMezclador);
         }
+
+        internal Motor Motor { get => _motor; set => _motor = value; }
         internal Rueda[] Ruedas { get => _ruedas; set => _ruedas = value; }
+        internal Estanque Estanque { get => _estanque; set => _estanque = value; }
+        internal Mezclador Mezclador { get => _mezclador; set => _mezclador = value; }
     }
 }
