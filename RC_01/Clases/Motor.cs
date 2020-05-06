@@ -26,27 +26,6 @@ namespace RC_01.Clases
             _cilindrada = cilindrada;
         }
 
-        public NumMotor()
-        {
-            while (numMotor != 1 && numMotor != 2)
-            {
-                if (numMotor == 1)
-                {
-                    TipoMotor tipo_Motor = TipoMotor.DOS_TIEMPOS;
-                }
-                else if (numMotor == 2)
-                {
-                    TipoMotor tipo_Motor = TipoMotor.CUATRO_TIEMPOS;
-                    
-                }
-                else
-                {
-                    Console.WriteLine("Error, debe ingresar un tipo de motor");
-                }
-
-            }
-        }
-
         public int ID => _id;
 
         public TipoMotor Tipo => _tipo;

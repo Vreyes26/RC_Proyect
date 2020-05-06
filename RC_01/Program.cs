@@ -7,6 +7,8 @@ namespace RC_01
 {
     class Program
     {
+        private static TipoMotor tipo_Motor;
+
         static void Main(string[] args)
         {
 
@@ -21,52 +23,64 @@ namespace RC_01
                 password = Console.ReadLine();
             } while (usuario != "admin" && password != "1234");
 
-            //INSTANCIAS
-            Automovil x1 = new Automovil();
-            
-                do
-                {
-                Console.WriteLine("Ingrese el numero correspondiente a la opcion:\n" +
-                                "1: Agregar vehiculo\n" +
-                                "2: Ver datos de vehiculo\n" +
-                                "0: Salir\n");
-                menu = Console.ReadLine();
+            do
+            {
+            Console.WriteLine("Ingrese el numero correspondiente a la opcion:\n" +
+                            "1: Agregar vehiculo\n" +
+                            "2: Ver datos de vehiculo\n" +
+                            "0: Salir\n");
+            menu = Console.ReadLine();
 
-                switch (menu)
-                {
-                    case "1":
-                        Console.WriteLine("Agregar marca: ");
-                        string marca = Console.ReadLine();
-                        x1.Marca(marca);
-                        Console.WriteLine("Agregar año: ");
-                        int año = int.Parse(Console.ReadLine());
-                        x1.Año(año);
-                        Console.WriteLine("Klometraje : ");
-                        int kilometraje = int.Parse(Console.ReadLine());
-                        x1.Kilometraje(kilometraje);
-                        Console.WriteLine("Ingrese ID del motor ");
-                        int id_Motor = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese el numero correspondiente al tipo de motor:/n" +
-                                          "1: Motor de dos tiempos./n" +
-                                          "2: Motor de cuatro tiempos.");
-
-                        int numMotor = Convert.ToInt32(Console.ReadLine());
-
+            switch (menu)
+            {
+                case "1":
+                    Console.WriteLine("Agregar marca: ");
+                    string marca = Console.ReadLine();
                         
+                    Console.WriteLine("Agregar año: ");
+                    int año = int.Parse(Console.ReadLine());
                         
+                    Console.WriteLine("Klometraje : ");
+                    int kilometraje = int.Parse(Console.ReadLine());
+                        
+                    Console.WriteLine("Ingrese ID del motor ");
+                    int id_Motor = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Ingrese el numero correspondiente al tipo de motor:/n" +
+                                        "1: Motor de dos tiempos./n" +
+                                        "2: Motor de cuatro tiempos.");
+
+                    int numMotor = Convert.ToInt32(Console.ReadLine());
+
+                    do
+                    {
+                        if (numMotor == 1)
+                        {
+                            TipoMotor tipo_Motor = TipoMotor.DOS_TIEMPOS;
+                        }
+                        else if (numMotor == 2)
+                        {
+                            TipoMotor tipo_motor = TipoMotor.CUATRO_TIEMPOS;
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error, debe ingresar un tipo de motor");
+                        }
+                    } while (numMotor != 1 || numMotor != 2);
+
                         Console.WriteLine("Ingrese el tipo de cilindrada del vehiculo: ");
-                        double cilindrada_V = Convert.ToDouble(Console.ReadLine());
+                    double cilindrada_V = Convert.ToDouble(Console.ReadLine());
 
-                        Motor x2 = new Motor(id_Motor, tipo_Motor, cilindrada_V);
-                        break;
+                    Motor motor = new Motor(id_Motor, tipo_Motor, cilindrada_V);
+                    break;
 
-                    case "2":
-                        Console.WriteLine(x1.ToString());
-                        break;
-                   
-                }
+                case "2":
+                        Console.Clear();
+                    Console.WriteLine("Datos Vehiculo");
+                    break;
+            }
 
-            } while (menu != "0");
+        } while (menu != "0");
 
 
 

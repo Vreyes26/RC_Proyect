@@ -4,42 +4,17 @@ using System.Text;
 
 namespace RC_01.Clases
 {
-    class Automovil : VehiculoComponente
+    class Automovil
     {
-        private string _Marca = "";
-        private int _Año = 0;
-        private int _Kilometraje = 0;
+        public string _marca;
+        public int _año;
+        public int _kilometraje;
 
-        public string Marca (string nombre)
+        public Automovil(int kilometraje, string marca, int año)
         {
-            this._Marca = nombre;
-            return nombre;
+            _kilometraje = kilometraje;
+            _marca = marca;
+            _año = año;
         }
-        public int Año(int año)
-        {
-            this._Año = año;
-            return año;
-        }
-        public int Kilometraje(int kilometraje)
-        {
-            this._Kilometraje = kilometraje;
-            return kilometraje;
-        }
-
-        public string TipoMotor()
-        public override string ToString()
-        {
-            string convertir_kilo = Convert.ToString(_Kilometraje);
-            string convert_año = Convert.ToString(_Año);
-            string[] Lista = new string[3];
-            Lista[0] = _Marca;
-            Lista[1] = convert_año;
-            Lista[2] = convertir_kilo;
-            return "lOS RESULTADOS SON:" + "\n" + 
-                "Marca: " + Lista[0] + "\n" + 
-                "Año : " + Lista[1] + "\n" + 
-                "Kilometraje: " + Lista[2];
-        }
-
-    }
+    }   
 }
