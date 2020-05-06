@@ -7,7 +7,8 @@ namespace RC_01.Clases
 
     enum TipoMotor
     {
-        DOS_TIEMPOS, CUATRO_TIEMPOS
+        DOS_TIEMPOS = 1,
+        CUATRO_TIEMPOS = 2
     }
 
     class Motor: VehiculoComponente

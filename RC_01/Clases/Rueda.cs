@@ -10,15 +10,14 @@ namespace RC_01.Clases
         FENOL, HULE, POLIUTERANO
     }
 
-    class Rueda : VehiculoComponente
+    abstract class Rueda : VehiculoComponente
     {
-        private readonly int[] _durometro;
+        
+        /*private readonly int[] _durometro;
         private TipoRecubrimiento _recubrimiento;
+        */
 
-        public Rueda(TipoRecubrimiento, int minDurometro, int maxDurometro)
-        {
-            
-        }
-
+        
+        
     }
 }

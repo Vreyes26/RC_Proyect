@@ -23,9 +23,6 @@ namespace RC_01.Clases
         {
             _motor = new Motor(idMotor, tipoMotor, cilindrada);
             _ruedas = new Rueda[numRuedas];
-            for (int i = 0; i < numRuedas; i++)
-                _ruedas[i] = new Rueda(tipoRecubrimiento, minDurometro, maxDurometro);
-
             _estanque = new Estanque(capacidad);
             _mezclador = new Mezclador(tipoMezclador);
         }
