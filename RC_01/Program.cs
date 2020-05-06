@@ -49,7 +49,11 @@ namespace RC_01
                         Console.WriteLine("Ingrese el numero correspondiente al tipo de motor:/n" +
                                           "1: Motor de dos tiempos./n" +
                                           "2: Motor de cuatro tiempos.");
-                        double tipo_Motor = (Console.ReadLine();
+
+                        int numMotor = Convert.ToInt32(Console.ReadLine());
+
+                        
+                        
                         Console.WriteLine("Ingrese el tipo de cilindrada del vehiculo: ");
                         double cilindrada_V = Convert.ToDouble(Console.ReadLine());
 

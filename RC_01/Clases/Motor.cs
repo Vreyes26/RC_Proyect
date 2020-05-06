@@ -7,8 +7,8 @@ namespace RC_01.Clases
 
     enum TipoMotor
     {
-        DOS_TIEMPOS = 1,
-        CUATRO_TIEMPOS = 2
+        DOS_TIEMPOS,
+        CUATRO_TIEMPOS 
     }
 
     class Motor: VehiculoComponente
@@ -16,12 +16,35 @@ namespace RC_01.Clases
         private readonly int _id;
         private readonly TipoMotor _tipo;
         private double _cilindrada;
+        private int _numeroMotor;
+        
 
         public Motor(int id, TipoMotor tipo, double cilindrada)
         {
             _id = id;
             _tipo = tipo;
             _cilindrada = cilindrada;
+        }
+
+        public NumMotor()
+        {
+            while (numMotor != 1 && numMotor != 2)
+            {
+                if (numMotor == 1)
+                {
+                    TipoMotor tipo_Motor = TipoMotor.DOS_TIEMPOS;
+                }
+                else if (numMotor == 2)
+                {
+                    TipoMotor tipo_Motor = TipoMotor.CUATRO_TIEMPOS;
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Error, debe ingresar un tipo de motor");
+                }
+
+            }
         }
 
         public int ID => _id;
