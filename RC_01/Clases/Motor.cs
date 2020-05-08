@@ -16,7 +16,6 @@ namespace RC_01.Clases
         private readonly int _id;
         private readonly TipoMotor _tipo;
         private double _cilindrada;
-        private int _numeroMotor;
         
 
         public Motor(int id, TipoMotor tipo, double cilindrada)

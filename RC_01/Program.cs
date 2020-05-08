@@ -25,28 +25,30 @@ namespace RC_01
 
             do
             {
-            Console.WriteLine("Ingrese el numero correspondiente a la opcion:\n" +
-                            "1: Agregar vehiculo\n" +
-                            "2: Ver datos de vehiculo\n" +
-                            "0: Salir\n");
+            Console.WriteLine("Ingrese el numero correspondiente a la opcion: \n" +
+                            "1: Agregar vehiculo \n" +
+                            "2: Ver datos de vehiculo \n" +
+                            "0: Salir \n");
             menu = Console.ReadLine();
 
             switch (menu)
             {
-                case "1":
+                case "1": //AGREGAR DATOS
                     Console.WriteLine("Agregar marca: ");
                     string marca = Console.ReadLine();
-                        
+
                     Console.WriteLine("Agregar año: ");
                     int año = int.Parse(Console.ReadLine());
                         
-                    Console.WriteLine("Klometraje : ");
+                    Console.WriteLine("Kilometraje : ");
                     int kilometraje = int.Parse(Console.ReadLine());
-                        
+
+                    Automovil auto = new Automovil(kilometraje, marca, año);
+                    Console.WriteLine(auto._marca, auto._año, auto._kilometraje);
                     Console.WriteLine("Ingrese ID del motor ");
-                    int id_Motor = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Ingrese el numero correspondiente al tipo de motor:/n" +
-                                        "1: Motor de dos tiempos./n" +
+                    int id_Motor = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Ingrese el numero correspondiente al tipo de motor:\n" +
+                                        "1: Motor de dos tiempos.\n" +
                                         "2: Motor de cuatro tiempos.");
 
                     int numMotor = Convert.ToInt32(Console.ReadLine());
@@ -66,18 +68,19 @@ namespace RC_01
                         {
                             Console.WriteLine("Error, debe ingresar un tipo de motor");
                         }
-                    } while (numMotor != 1 || numMotor != 2);
+                    } while (numMotor != 1 && numMotor != 2);
 
-                        Console.WriteLine("Ingrese el tipo de cilindrada del vehiculo: ");
+                    Console.WriteLine("Ingrese el tipo de cilindrada del vehiculo: ");
                     double cilindrada_V = Convert.ToDouble(Console.ReadLine());
-
                     Motor motor = new Motor(id_Motor, tipo_Motor, cilindrada_V);
                     break;
 
-                case "2":
+                    case "2":
                         Console.Clear();
-                    Console.WriteLine("Datos Vehiculo");
-                    break;
+                        Console.WriteLine("Datos Vehiculo");
+                        
+                        Console.WriteLine();
+                        break;
             }
 
         } while (menu != "0");
